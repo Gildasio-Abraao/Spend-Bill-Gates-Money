@@ -325,7 +325,8 @@ export default new Vuex.Store({
     ],
 
     myMoney: {
-      default: 100000000000
+      default: 100000000000,
+      total: 0
     }
   },
 
@@ -355,6 +356,7 @@ export default new Vuex.Store({
         //return
         return total + (parseInt(product.quantity) * product.price);
       }
+      state.myMoney.total = total;
       return (state.myMoney.default-total);
     },
 

@@ -55,7 +55,7 @@
       <table class="totalTable">
         <tr>
           <td>TOTAL:</td>
-          <td class="tableMoney">{{new Intl.NumberFormat().format(money)}}</td>
+          <td class="tableMoney">${{new Intl.NumberFormat().format(myMoney.total)}}</td>
         </tr>
       </table>
     </div>
@@ -63,12 +63,15 @@
 </template>
 
 <script>
-import { mapGetters, mapMutations } from "vuex";
+import { mapGetters, mapMutations, mapState } from "vuex";
 export default {
   name: "App",
 
   computed: {
     ...mapGetters(["money", "products"]),
+    ...mapState({
+      myMoney: state => state.myMoney
+    })
   },
 
   methods: {
