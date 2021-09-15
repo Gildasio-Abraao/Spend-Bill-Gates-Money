@@ -55,9 +55,7 @@
       <table class="totalTable">
         <tr>
           <td>TOTAL:</td>
-          <td class="tableMoney">
-            ${{ new Intl.NumberFormat().format(money) }}
-          </td>
+          <td class="tableMoney">{{new Intl.NumberFormat().format(money)}}</td>
         </tr>
       </table>
     </div>
@@ -82,6 +80,8 @@ export default {
         return (num / 1000000000).toFixed(1) + "B"; // convert to M for number from > 1 million
       }else if (num > 1000000) {
         return (num / 1000000).toFixed(1) + "M"; // convert to M for number from > 1 million
+      }else{
+        return num;
       }
     },
   },
