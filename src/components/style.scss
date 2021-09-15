@@ -1,0 +1,279 @@
+@import '../assets/scss/index.scss';
+
+/*Bill Gates'money bar style box*/
+.headerBox {
+  @include navBox;
+}
+
+.headerBox img {
+  clip-path: circle(41.1% at 50% 50%);
+  width: 70%;
+  margin: 0 auto;
+}
+
+.moneytxt {
+  @include title;
+}
+
+.money {
+  @include money;
+}
+
+/*items style*/
+.item {
+  @include item;
+}
+
+.bodyItem {
+  text-align: center;
+}
+
+.defaultText {
+  margin-top: 10px;
+}
+
+.price {
+  color: $corVerde;
+}
+
+.item img {
+  width: unset;
+  height: 95px;
+}
+
+.footerItem {
+  @include footerItem;
+}
+
+.footerItem input {
+  @include inputItem;
+}
+
+.footerItem button {
+  @include btn;
+}
+
+.sellBtn {
+  color: white;
+  background-color: #ff4141;
+  margin-top: 20px;
+}
+
+.buyBtn {
+  background-color: $corVerde;
+  color: #fff;
+  margin-top: 20px;
+}
+
+.disable {
+  pointer-events: none;
+  background-color: #9c9c9c !important;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+/*Geral style*/
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 4rem;
+  color: $pCor;
+  background: #fff;
+}
+
+.title {
+  @include title;
+  width: 85%;
+  margin: auto;
+}
+
+.container {
+  @include container;
+}
+
+.items-container {
+  @include itemContainer;
+}
+
+/*custom scrollbar */
+
+/* width */
+.items-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.items-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.items-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.items-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+input[type="number"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+//receipt style
+
+.receipt {
+  @include receipt;
+}
+.receipt .title {
+  @include title;
+  color: $pCor;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.receipt table{
+  @include table;
+}
+.receipt .tableProduct{
+  @include tabletr;
+  margin-top: 20px;
+  display: flex;
+}
+.tdTitle {
+  @include tabletr;
+}
+.tableMoney {
+  color: $corVerde
+}
+.receipt .normalItens{
+  @include tabletd;
+}
+.receipt .totalTable{
+  @include totalTable;
+}
+.totalTable tr {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/*responsive*/
+
+@media (max-width: 1024px){
+  .headerBox {
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+  .headerBox img {
+    width: 20%;
+    margin: 0 auto;
+  }
+  .money {
+    margin-top: 2px;
+  }
+  .items-container {
+    width: 100%;
+    height: 100%;
+  }
+  .container {
+    height: 90vh;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 944px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 884px) {
+  .container {
+    height: 100vh;
+  }
+  .items-container {
+    justify-content: center;
+  }
+  .money, .moneytxt {
+    font-size: 1.5rem;
+  }
+  .item {
+    width: 30%;
+    height: 246px;
+  }
+}
+
+@media (max-width: 762px) {
+  .container {
+    width: 95%;
+  }
+  .items-container {
+    justify-content: space-between;
+    overflow-x: clip;
+  }
+  .item {
+    width: 32%;
+    height: 246px;
+    padding: 15px;
+    margin: 0 0 10px 5px;
+  }
+}
+
+@media (max-width: 646px) {
+  .item {
+    width: 48%;
+    height: 295px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .item {
+    width: 48%;
+    height: 260px;
+  }
+  .item img {
+    width: unset;
+    height: 65px;
+  }
+  .receipt table {
+    width: 90%;
+  }
+  .receipt .tableProduct {
+    width: 100%;
+  }
+  .receipt .normalItens {width: 20%;}
+}
+
+@media (max-width: 390px) {
+  .item {
+    width: 100%;
+    height: 290px;
+  }
+  .item img {
+    width: unset;
+    height: 95px;
+  }
+  .footerItem {
+    margin-top: 20px;
+  }
+  .headerBox img {
+    width: 35%;
+  }
+}

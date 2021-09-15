@@ -1,0 +1,94 @@
+@mixin navBox {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    margin-top: 20px;
+    background-color: #333333;
+    background: linear-gradient(180deg, #333333, #272727);
+    text-align: center;
+    padding: 20px;
+    box-shadow: -1px 2px 10px #cccccc61;
+    border-radius: 15px;
+}
+
+@mixin itemContainer {
+    width: 75%;
+    height: 100%;
+    overflow: auto;
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+@mixin item {
+    width: 252px;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: -1px 2px 10px #cccccc61;
+    background: white;
+    font-family: $pFamily;
+    color: $pCor;
+    border-radius: 15px;
+    font-size: $defaultSize;
+    margin: 0 0 10px 10px;
+}
+
+@mixin footerItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+    width: 100%;
+}
+
+@mixin container {
+    width: 85%;
+    height: 85vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin receipt {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    margin: auto;
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 5px;
+    box-shadow: -1px 2px 10px #cccccc61;
+}
+
+@mixin table {
+    display: flex;
+    justify-content: center;
+    font-family: $pFamily;
+    color: $pCor;
+    flex-direction: column;
+    width: 70%;
+}
+@mixin tabletr {
+    width: 90%;
+}
+@mixin tabletd {
+    width: 10%;
+}
+
+@mixin totalTable {
+    border-top: 2px solid;
+    margin-top: 10px;
+    padding-top: 10px;
+    font-weight: 700;
+}

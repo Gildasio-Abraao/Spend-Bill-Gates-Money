@@ -1,0 +1,28 @@
+@import './colors.scss';
+@import './boxes.scss';
+
+@mixin btn {
+    padding: 5px;
+    border-radius: 15px;
+    border: none;
+    width: 30%;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 700;
+    font-family: $pFamily;
+    opacity: 0.75;
+}
+
+@mixin inputItem {
+    width: 35%;
+    padding: 5px 10px;
+    border-radius: 15px;
+    border: none;
+    background: #333;
+    color: white;
+    text-align: center;
+    box-shadow: -1px 2px 8px #00000029;
+    font-size: 1.1rem;
+    outline: none;
+    transition: 0.3s;
+}
